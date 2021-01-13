@@ -1,12 +1,19 @@
 module.exports = {
   siteMetadata: {
     title: "Passive income",
+    siteUrl: "https://passive-income.today"
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-KHQ2DT756W",
+
+        trackingIds: [
+          "G-KHQ2DT756W"
+        ],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     "gatsby-plugin-sharp",
